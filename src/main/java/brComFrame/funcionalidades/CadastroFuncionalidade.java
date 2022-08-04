@@ -2,6 +2,7 @@ package brComFrame.funcionalidades;
 
 import brComFrame.pages.CadastroPage;
 import brComFrame.util.BaseTest;
+import org.junit.Assert;
 
 public class CadastroFuncionalidade extends BaseTest {
 
@@ -19,15 +20,19 @@ public class CadastroFuncionalidade extends BaseTest {
     public void SignupUser() {
         user.getRegister().click();
         user.getGender().click();
-        user.getFirstName().sendKeys("Viola");
-        user.getLastName().sendKeys("Davis");
-        user.getEmailSignup().sendKeys("viola.davis@teste.com");
+        user.getFirstName().sendKeys("Didier");
+        user.getLastName().sendKeys("Drogba");
+        user.getEmailSignup().sendKeys("teste12@teste.com");
         user.getPassword().sendKeys("teste123");
         user.getConfirmPassword().sendKeys("teste123");
     }
 
+    public void loginConfirm(String email) {
+        user.getAccountEmail().getText();
+    }
+
     public void Credentials() {
-        user.getEmail().sendKeys("viola.davis@teste.com");
+        user.getEmail().sendKeys("teste12@teste.com");
         user.getPassword().sendKeys("teste123");
         user.getLoginSubmit().click();
     }
@@ -35,6 +40,35 @@ public class CadastroFuncionalidade extends BaseTest {
     public void Submit() {
         user.getBtnRegister().click();
     }
+
+    public void Home() {
+        String URL = webDriver.getCurrentUrl();
+        Assert.assertEquals(URL, "http://demowebshop.tricentis.com/" );
+    }
+
+    public void LoginNews() {
+        this.webDriver.get("http://demowebshop.tricentis.com/");
+        user.getLogin().click();
+        user.getEmail().sendKeys("teste12@teste.com");
+        user.getPassword().sendKeys("teste123");
+        user.getLoginSubmit().click();
+    }
+
+
+    public void NewsletterEmail() {
+        user.getNewsletterEmail().sendKeys("teste12@teste.com");
+    }
+
+    public void NewsletterSubmit() {
+        user.getNewslleterSubmit().click();
+    }
+
+    public void NewsletterConfirm() {
+        user.getNewsletterConfirm().getText();
+    }
+
+
+
 
     public void TextoConfirmação(String register) {
         user.getMsgConfirm().getText();
@@ -44,9 +78,7 @@ public class CadastroFuncionalidade extends BaseTest {
         user.getLogin().click();
     }
 
-    public void loginConfirm(String email) {
-        user.getAccountEmail().getText();
-    }
+
 
     public void registerPage() {
         user.getRegister().click();

@@ -2,6 +2,10 @@ package brComFrame.funcionalidades;
 
 import brComFrame.pages.CarrinhoPage;
 import brComFrame.util.BaseTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class CarrinhoFuncionalidade extends BaseTest {
 
@@ -14,7 +18,7 @@ public class CarrinhoFuncionalidade extends BaseTest {
     public void Login() {
         this.webDriver.get("http://demowebshop.tricentis.com/");
         carrinhoPage.getLogin().click();
-        carrinhoPage.getEmail().sendKeys("carlos.maluf@teste.com");
+        carrinhoPage.getEmail().sendKeys("teste12@teste.com");
         carrinhoPage.getPassword().sendKeys("teste123");
         carrinhoPage.getLoginSubmit().click();
     }
@@ -47,7 +51,8 @@ public class CarrinhoFuncionalidade extends BaseTest {
     public void AddDigital() {
         carrinhoPage.getDigital().click();
         carrinhoPage.getAlbum().click();
-        carrinhoPage.getQty().sendKeys("100");
+        carrinhoPage.getQty().clear();
+        carrinhoPage.getQty().sendKeys("5");
     }
 
     public void AddJewelry() {
@@ -64,6 +69,27 @@ public class CarrinhoFuncionalidade extends BaseTest {
         carrinhoPage.getPhysicalCard().click();
         carrinhoPage.getRecipient().sendKeys("Yamanos");
         carrinhoPage.getMessage().sendKeys("Está é uma mensagem de esperança a todos Yamanos");
+    }
+
+    public void SelectCheckbox() {
+      List<WebElement> elements = webDriver.findElements(By.xpath("//input[@name='removefromcart']"));
+
+      for(WebElement setAll:elements)
+      {
+          setAll.click();
+    }
+      }
+
+    public void UpdateCart() {
+        carrinhoPage.getUpdateCart().click();
+    }
+
+    public void emptyCart(String msgEmpty) {
+        carrinhoPage.getEmpty().getText();
+    }
+
+    public void Cart() {
+        carrinhoPage.getCart().click();
     }
 
     public void AddCart() {

@@ -49,5 +49,31 @@ public class CadastroSteps {
     public void devoVisualizarNoCabeçalhoDaPágina(String email) {
         this.user.loginConfirm(email);
     }
+
+    @Dado("que possuo um cadastro válido")
+    public void quePossuoUmCadastroVálido() {
+        this.user.LoginNews();
+
+    }
+
+    @E("estou na home")
+    public void estouNaHome() {
+        this.user.Home();
+    }
+
+    @Quando("insiro meu email para assinar a newsletter")
+    public void insiroMeuEmailParaAssinarANewsletter() {
+        this.user.NewsletterEmail();
+    }
+
+    @E("clico em Subscribe")
+    public void clicoEmSubscribe() {
+        this.user.NewsletterSubmit();
+    }
+
+    @Entao("devo visualizar um texto com a confirmação")
+    public void devoVisualizarUmTextoComAConfirmação() {
+        this.user.NewsletterConfirm();
+    }
 }
 

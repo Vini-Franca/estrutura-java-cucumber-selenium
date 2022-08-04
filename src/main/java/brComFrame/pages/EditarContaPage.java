@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CadastroPage {
+public class EditarContaPage {
 
     @FindBy(className = "ico-register")
     private WebElement register;
@@ -31,86 +31,76 @@ public class CadastroPage {
     @FindBy(xpath = "//input[@id='register-button']")
     private WebElement btnRegister;
 
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[1]/div[1]/a/img")
-    private WebElement homePage;
-
-    @FindBy(className = "result")
-    private WebElement msgConfirm;
-
-    @FindBy(className = "content")
-    private WebElement msgCarrinho;
-
-    @FindBy(xpath = "//span[@for='FirstName']")
-    private WebElement firstError;
-
-    @FindBy(xpath = "//span[@for='LastName']")
-    private WebElement lastError;
-
-    @FindBy(xpath = "//span[@for='Email']")
-    private WebElement emailError;
-
-    @FindBy(xpath = "//span[@for='ConfirmPassword']")
-    private WebElement passwordError;
-
     @FindBy(className = "ico-login")
     private WebElement login;
 
-    @FindBy(className = "email")
+    @FindBy(name = "Email")
     private WebElement email;
 
     @FindBy(xpath = "//input[@class='button-1 login-button']")
     private WebElement loginSubmit;
 
     @FindBy(className = "account")
-    private WebElement accountEmail;
+    private WebElement account;
 
-    @FindBy(id = "newsletter-email")
-    private WebElement newsletterEmail;
+    @FindBy(xpath = "//input[@class='button-1 save-customer-info-button']")
+    private WebElement saveEmail;
 
-    @FindBy(xpath = "//input[@class='button-1 newsletter-subscribe-button']")
-    private WebElement newslleterSubmit;
+    @FindBy(linkText = "Change password")
+    private WebElement changePassword;
 
-    @FindBy(id = "newsletter-result-block")
-    private WebElement newsletterConfirm;
+    @FindBy(id = "OldPassword")
+    private WebElement oldPassword;
 
-    public CadastroPage(WebDriver driver) {
+    @FindBy(id = "NewPassword")
+    private WebElement newPassword;
+
+    @FindBy(id = "ConfirmNewPassword")
+    private WebElement confirmNewPassword;
+
+    @FindBy(xpath = "//input[@class='button-1 change-password-button']")
+    private WebElement savePassword;
+
+    @FindBy(className = "ico-logout")
+    private WebElement logout;
+
+
+
+    public EditarContaPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
+    }
+
+    public WebElement getChangePassword() {
+        return changePassword ;
+    }
+
+    public WebElement getLogout() {
+        return logout ;
+    }
+
+    public WebElement getOldPassword() {
+        return oldPassword;
+    }
+
+    public WebElement getNewPassword() {
+        return newPassword;
+    }
+
+    public WebElement getConfirmNewPassword() {
+        return confirmNewPassword;
+    }
+
+    public WebElement getSavePassword() {
+        return savePassword;
     }
 
     public WebElement getRegister() {
         return register;
     }
 
-    public WebElement getNewsletterConfirm() {
-        return newsletterConfirm;
+    public WebElement getSaveEmail() {
+        return saveEmail;
     }
-
-    public WebElement getNewsletterEmail() {
-        return newsletterEmail;
-    }
-
-    public WebElement getNewslleterSubmit() {
-        return newslleterSubmit;
-    }
-
-
-    public WebElement getFirstError() {
-        return firstError;
-    }
-
-    public WebElement getPasswordError() {
-        return passwordError;
-    }
-
-
-    public WebElement getEmailError() {
-        return emailError;
-    }
-
-    public WebElement getLastError() {
-        return lastError;
-    }
-
 
     public WebElement getGender() {
         return gender;
@@ -140,14 +130,6 @@ public class CadastroPage {
         return btnRegister;
     }
 
-    public WebElement getHomePage() {
-        return homePage;
-    }
-
-    public WebElement getMsgConfirm() {
-        return msgConfirm;
-    }
-
     public WebElement getLogin() {
         return login;
     }
@@ -160,8 +142,8 @@ public class CadastroPage {
         return loginSubmit;
     }
 
-    public WebElement getAccountEmail() {
-        return accountEmail;
+    public WebElement getAccount() {
+        return account;
     }
 
 }

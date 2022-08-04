@@ -64,4 +64,24 @@ public class CarrinhoSteps {
     public void escolhoUmGiftCardParaComprar() {
         this.carrinho.AddGiftCard();
     }
+
+    @E("desejo excluir os itens adicionados ao carrinho")
+    public void desejoExcluirOsItensAdicionadosAoCarrinho() {
+      this.carrinho.Cart();
+    }
+
+    @Quando("seleciono os itens")
+    public void selecionoOsItens() {
+        this.carrinho.SelectCheckbox();
+    }
+
+    @E("clico em Update shopping cart")
+    public void clicoEmUpdateShoppingCart() {
+        this.carrinho.UpdateCart();
+    }
+
+    @Entao("deve ser exibido {string}")
+    public void deveSerExibido(String msgEmpty) {
+        this.carrinho.emptyCart(msgEmpty);
+    }
 }

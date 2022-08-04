@@ -14,7 +14,7 @@ public class CheckoutFuncionalidade extends BaseTest {
     public void Login() {
         this.webDriver.get("http://demowebshop.tricentis.com/");
         checkoutPage.getLogin().click();
-        checkoutPage.getEmail().sendKeys("carlos.maluf@teste.com");
+        checkoutPage.getEmail().sendKeys("teste12@teste.com");
         checkoutPage.getPassword().sendKeys("teste123");
         checkoutPage.getLoginSubmit().click();
     }

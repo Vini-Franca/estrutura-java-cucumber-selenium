@@ -20,8 +20,12 @@ public class CarrinhoPage {
     @FindBy(xpath = "//input[@class='button-1 login-button']")
     private WebElement loginSubmit;
 
-    @FindBy(className = "account")
+    @FindBy(className = "content")
     private WebElement msgCarrinho;
+
+
+    @FindBy(className = "cart-label")
+    private WebElement cart;
 
     @FindBy(xpath = "//input[@class='button-1 add-to-cart-button']")
     private WebElement addCart;
@@ -92,6 +96,16 @@ public class CarrinhoPage {
     @FindBy(className = "message")
     private WebElement message;
 
+    @FindBy(xpath = "//*[contains(text(),'Your Shopping Cart is empty!')]")
+    private WebElement empty;
+
+    @FindBy(xpath = "//input[@name='removefromcart']")
+    private WebElement removeCart;
+
+    @FindBy(xpath = "//input[@class='button-2 update-cart-button']")
+    private WebElement updateCart;
+
+
 
     public CarrinhoPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -103,6 +117,22 @@ public class CarrinhoPage {
 
     public WebElement getPhysicalCard() {
         return physicalCard;
+    }
+
+    public WebElement getCart() {
+        return cart;
+    }
+
+    public WebElement getEmpty() {
+        return empty;
+    }
+
+    public WebElement getUpdateCart() {
+        return updateCart;
+    }
+
+    public WebElement getRemoveCart() {
+        return removeCart;
     }
 
     public WebElement getRecipient() {

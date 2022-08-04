@@ -57,5 +57,13 @@ Funcionalidade: Incluir produtos disponíveis ao carrinho
     Quando clico add to cart
     Entao devo visualizar uma mensagem "The product has been added to your shopping cart"
 
+  @cleanCart
+  Cenario: Esvaziar carrinho
+    Dado que ja estou logado
+    E desejo excluir os itens adicionados ao carrinho
+    Quando seleciono os itens
+    E clico em Update shopping cart
+    Entao deve ser exibido "Your Shopping Cart is empty!"
+
 
 
