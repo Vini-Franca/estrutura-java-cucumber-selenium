@@ -55,6 +55,6 @@ E na pasta target/report você encontrará um arquivo index.html - relatório pe
 Por conveniência, faça o download do chromedriver adequado para o seu sistema operacional e adicione no diretório resources/drivers.
 Local para download: https://chromedriver.chromium.org/downloads
 
-Créditos - Documentação feita por [Samuel Lucas](https://github.com/samlucax)
+Créditos - Documentação [Samuel Lucas](https://github.com/samlucax) | Estrutura [Marcelo Ribelato] (https://github.com/MarceloRibelato)
 
 ------------
