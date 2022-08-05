@@ -21,7 +21,7 @@ Funcionalidade: Cadastrar e logar usuário
     Dado que estou na página inicial
     E clico em login
     Quando preencho e envio minhas credenciais
-    Entao devo visualizar "teste12@teste.com" no cabeçalho da página
+    Entao devo visualizar "justiceiro@teste.com" no cabeçalho da página
 
   @cadastroNewsletter
   Cenario: Assinar newsletter

@@ -65,17 +65,16 @@ public class EditarContaPage {
     private WebElement logout;
 
 
-
     public EditarContaPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
     public WebElement getChangePassword() {
-        return changePassword ;
+        return changePassword;
     }
 
     public WebElement getLogout() {
-        return logout ;
+        return logout;
     }
 
     public WebElement getOldPassword() {

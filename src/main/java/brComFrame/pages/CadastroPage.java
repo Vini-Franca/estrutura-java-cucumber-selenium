@@ -31,10 +31,7 @@ public class CadastroPage {
     @FindBy(xpath = "//input[@id='register-button']")
     private WebElement btnRegister;
 
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[1]/div[1]/a/img")
-    private WebElement homePage;
-
-    @FindBy(className = "result")
+    @FindBy(className = "//*[contains(text(),'Your registration completed')]")
     private WebElement msgConfirm;
 
     @FindBy(className = "content")
@@ -93,24 +90,13 @@ public class CadastroPage {
         return newslleterSubmit;
     }
 
-
     public WebElement getFirstError() {
         return firstError;
     }
 
-    public WebElement getPasswordError() {
-        return passwordError;
-    }
-
-
     public WebElement getEmailError() {
         return emailError;
     }
-
-    public WebElement getLastError() {
-        return lastError;
-    }
-
 
     public WebElement getGender() {
         return gender;
@@ -140,9 +126,6 @@ public class CadastroPage {
         return btnRegister;
     }
 
-    public WebElement getHomePage() {
-        return homePage;
-    }
 
     public WebElement getMsgConfirm() {
         return msgConfirm;

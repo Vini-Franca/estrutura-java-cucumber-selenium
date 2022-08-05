@@ -14,15 +14,16 @@ public class CadastroFuncionalidade extends BaseTest {
 
     public void HomePage() {
         this.webDriver.get("http://demowebshop.tricentis.com/");
-        user.getHomePage().click();
+        String URL = webDriver.getCurrentUrl();
+        Assert.assertEquals(URL, "http://demowebshop.tricentis.com/");
     }
 
     public void SignupUser() {
         user.getRegister().click();
         user.getGender().click();
-        user.getFirstName().sendKeys("Didier");
-        user.getLastName().sendKeys("Drogba");
-        user.getEmailSignup().sendKeys("teste12@teste.com");
+        user.getFirstName().sendKeys("Frank");
+        user.getLastName().sendKeys("Castle");
+        user.getEmailSignup().sendKeys("justiceiro@teste.com");
         user.getPassword().sendKeys("teste123");
         user.getConfirmPassword().sendKeys("teste123");
     }
@@ -32,7 +33,7 @@ public class CadastroFuncionalidade extends BaseTest {
     }
 
     public void Credentials() {
-        user.getEmail().sendKeys("teste12@teste.com");
+        user.getEmail().sendKeys("justiceiro@teste.com");
         user.getPassword().sendKeys("teste123");
         user.getLoginSubmit().click();
     }
@@ -43,13 +44,13 @@ public class CadastroFuncionalidade extends BaseTest {
 
     public void Home() {
         String URL = webDriver.getCurrentUrl();
-        Assert.assertEquals(URL, "http://demowebshop.tricentis.com/" );
+        Assert.assertEquals(URL, "http://demowebshop.tricentis.com/");
     }
 
     public void LoginNews() {
         this.webDriver.get("http://demowebshop.tricentis.com/");
         user.getLogin().click();
-        user.getEmail().sendKeys("teste12@teste.com");
+        user.getEmail().sendKeys("justiceiro@teste.com");
         user.getPassword().sendKeys("teste123");
         user.getLoginSubmit().click();
     }
@@ -68,8 +69,6 @@ public class CadastroFuncionalidade extends BaseTest {
     }
 
 
-
-
     public void TextoConfirmação(String register) {
         user.getMsgConfirm().getText();
     }
@@ -77,7 +76,6 @@ public class CadastroFuncionalidade extends BaseTest {
     public void Login() {
         user.getLogin().click();
     }
-
 
 
     public void registerPage() {

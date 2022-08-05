@@ -35,7 +35,7 @@ public class CheckoutPage {
     @FindBy(linkText = "Desktops")
     private WebElement desktop;
 
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[3]/div/div[1]/a/img")
+    @FindBy(linkText = "Build your own cheap computer")
     private WebElement addProduct;
 
     @FindBy(xpath = "//input[@name='product_attribute_72_5_18']")
@@ -53,7 +53,7 @@ public class CheckoutPage {
     @FindBy(className = "account")
     private WebElement msgCarrinho;
 
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div/form/div/div[1]/div[2]/div[8]/div/input[2]")
+    @FindBy(xpath = "//input[@class='button-1 add-to-cart-button']")
     private WebElement addCart;
 
     @FindBy(className = "cart-label")
@@ -83,17 +83,16 @@ public class CheckoutPage {
     @FindBy(xpath = "//input[@class='button-1 new-address-next-step-button']")
     private WebElement continueButton;
 
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div/div/div[2]/ol/li[2]/div[2]/div/input")
+    @FindBy(xpath = "//div[@id='shipping-buttons-container']//child::input")
     private WebElement nextButton;
 
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div/div/div[2]/ol/li[4]/div[2]/div/input")
+    @FindBy(xpath = "//div[@id='payment-method-buttons-container']//child::input")
     private WebElement nextButton1;
 
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div/div/div[2]/ol/li[5]/div[2]/div/input")
+    @FindBy(xpath = "//div[@id='payment-info-buttons-container']//child::input")
     private WebElement nextButton2;
 
-
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div/div/div[2]/ol/li[3]/div[2]/form/div[2]/input")
+    @FindBy(xpath = "//div[@id='shipping-method-buttons-container']//child::input")
     private WebElement nextShipping;
 
     @FindBy(xpath = "//input[@id='shippingoption_1']")
@@ -105,13 +104,13 @@ public class CheckoutPage {
     @FindBy(xpath = "//input[@id='paymentmethod_1']")
     private WebElement paymentOption;
 
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div/div/div[2]/ol/li[6]/div[2]/div[2]/input")
+    @FindBy(xpath = "//div[@id='confirm-order-buttons-container']//child::input")
     private WebElement confirmButton;
 
     @FindBy(xpath = "//[@id='checkout-shipping-load']/div/div[2]/p[2]/i")
     private WebElement textCheckout;
 
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div/div/div[2]/div/div[1]/strong")
+    @FindBy(xpath = "//*[contains(text(),'Your order has been successfully processed!')]")
     private WebElement checkoutMsg;
 
 
@@ -260,28 +259,12 @@ public class CheckoutPage {
         return zipCode;
     }
 
-    public WebElement getProcessor() {
-        return processor;
-    }
-
     public WebElement getAddCart() {
         return addCart;
     }
 
     public WebElement getMsgCarrinho() {
         return msgCarrinho;
-    }
-
-    public WebElement getRam() {
-        return ram;
-    }
-
-    public WebElement getHdd() {
-        return hdd;
-    }
-
-    public WebElement getSoftware() {
-        return software;
     }
 
     public WebElement getComputer() {

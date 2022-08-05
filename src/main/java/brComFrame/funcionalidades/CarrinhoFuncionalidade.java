@@ -18,7 +18,7 @@ public class CarrinhoFuncionalidade extends BaseTest {
     public void Login() {
         this.webDriver.get("http://demowebshop.tricentis.com/");
         carrinhoPage.getLogin().click();
-        carrinhoPage.getEmail().sendKeys("teste12@teste.com");
+        carrinhoPage.getEmail().sendKeys("justiceiro@teste.com");
         carrinhoPage.getPassword().sendKeys("teste123");
         carrinhoPage.getLoginSubmit().click();
     }
@@ -72,13 +72,12 @@ public class CarrinhoFuncionalidade extends BaseTest {
     }
 
     public void SelectCheckbox() {
-      List<WebElement> elements = webDriver.findElements(By.xpath("//input[@name='removefromcart']"));
+        List<WebElement> elements = webDriver.findElements(By.xpath("//input[@name='removefromcart']"));
 
-      for(WebElement setAll:elements)
-      {
-          setAll.click();
+        for (WebElement setAll : elements) {
+            setAll.click();
+        }
     }
-      }
 
     public void UpdateCart() {
         carrinhoPage.getUpdateCart().click();

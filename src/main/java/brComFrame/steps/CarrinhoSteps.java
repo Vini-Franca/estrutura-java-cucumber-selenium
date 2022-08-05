@@ -14,9 +14,10 @@ public class CarrinhoSteps {
 
         this.carrinho = new CarrinhoFuncionalidade();
     }
+
     @Dado("que ja estou logado")
     public void que_ja_estou_logado() {
-       this.carrinho.Login();
+        this.carrinho.Login();
     }
 
     @Quando("clico add to cart")
@@ -67,7 +68,7 @@ public class CarrinhoSteps {
 
     @E("desejo excluir os itens adicionados ao carrinho")
     public void desejoExcluirOsItensAdicionadosAoCarrinho() {
-      this.carrinho.Cart();
+        this.carrinho.Cart();
     }
 
     @Quando("seleciono os itens")

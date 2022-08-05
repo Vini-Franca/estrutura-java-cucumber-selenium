@@ -36,7 +36,7 @@ public class CarrinhoPage {
     @FindBy(linkText = "Desktops")
     private WebElement desktop;
 
-    @FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[3]/div/div[1]/a/img")
+    @FindBy(xpath = "//img[@alt='Picture of Build your own cheap computer']")
     private WebElement addPC;
 
     @FindBy(linkText = "Books")
@@ -104,7 +104,6 @@ public class CarrinhoPage {
 
     @FindBy(xpath = "//input[@class='button-2 update-cart-button']")
     private WebElement updateCart;
-
 
 
     public CarrinhoPage(WebDriver driver) {
