@@ -85,4 +85,14 @@ public class CarrinhoSteps {
     public void deveSerExibido(String msgEmpty) {
         this.carrinho.emptyCart(msgEmpty);
     }
+
+    @E("pesquiso um produto")
+    public void pesquisoUmProduto() {
+        this.carrinho.Search();
+    }
+
+    @Quando("seleciono o item")
+    public void selecionoOItem() {
+        this.carrinho.SelectProduct();
+    }
 }

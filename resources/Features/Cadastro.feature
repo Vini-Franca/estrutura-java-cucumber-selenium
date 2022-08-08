@@ -21,7 +21,14 @@ Funcionalidade: Cadastrar e logar usuário
     Dado que estou na página inicial
     E clico em login
     Quando preencho e envio minhas credenciais
-    Entao devo visualizar "justiceiro@teste.com" no cabeçalho da página
+    Entao devo visualizar "teste003@teste.com" no cabeçalho da página
+
+  @logout
+  Cenario: Fazer o loggout do usuario
+    Dado que estou na página inicial
+    E faço o login com minhas credenciais
+    Quando clico em Log out
+    Entao devo ser redirecionado a página inicial
 
   @cadastroNewsletter
   Cenario: Assinar newsletter

@@ -75,5 +75,21 @@ public class CadastroSteps {
     public void devoVisualizarUmTextoComAConfirmação() {
         this.user.NewsletterConfirm();
     }
+
+    @E("faço o login com minhas credenciais")
+    public void façoOLoginComMinhasCredenciais() {
+        clicoEmLogin();
+        preenchoEEnvioMinhasCredenciais();
+    }
+
+    @Quando("clico em Log out")
+    public void clicoEmLogOut() {
+        this.user.Logout();
+    }
+
+    @Entao("devo ser redirecionado a página inicial")
+    public void devoSerRedirecionadoAPáginaInicial() {
+        estouNaHome();
+    }
 }
 

@@ -18,9 +18,19 @@ public class CarrinhoFuncionalidade extends BaseTest {
     public void Login() {
         this.webDriver.get("http://demowebshop.tricentis.com/");
         carrinhoPage.getLogin().click();
-        carrinhoPage.getEmail().sendKeys("justiceiro@teste.com");
+        carrinhoPage.getEmail().sendKeys("teste003@teste.com");
         carrinhoPage.getPassword().sendKeys("teste123");
         carrinhoPage.getLoginSubmit().click();
+    }
+
+    public void Search() {
+        carrinhoPage.getSearch().sendKeys("Sneaker");
+        carrinhoPage.getButtonSearch().click();
+    }
+
+    public void SelectProduct() {
+        carrinhoPage.getShoes().click();
+
     }
 
     public void AddPC() {

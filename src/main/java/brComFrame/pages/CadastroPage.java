@@ -31,8 +31,11 @@ public class CadastroPage {
     @FindBy(xpath = "//input[@id='register-button']")
     private WebElement btnRegister;
 
-    @FindBy(className = "//*[contains(text(),'Your registration completed')]")
+    @FindBy(xpath = "//*[contains(text(),'Your registration completed')]")
     private WebElement msgConfirm;
+
+    @FindBy(xpath = "//*[contains(text(),'Please enter a valid email address.')]")
+    private WebElement msgEmail;
 
     @FindBy(className = "content")
     private WebElement msgCarrinho;
@@ -61,8 +64,14 @@ public class CadastroPage {
     @FindBy(className = "account")
     private WebElement accountEmail;
 
+    @FindBy(className = "ico-logout")
+    private WebElement logout;
+
     @FindBy(id = "newsletter-email")
     private WebElement newsletterEmail;
+
+    @FindBy(xpath = "//div[@class='validation-summary-errors']//child::span")
+    private WebElement msgError;
 
     @FindBy(xpath = "//input[@class='button-1 newsletter-subscribe-button']")
     private WebElement newslleterSubmit;
@@ -76,6 +85,18 @@ public class CadastroPage {
 
     public WebElement getRegister() {
         return register;
+    }
+
+    public WebElement getMsgEmail() {
+        return msgEmail;
+    }
+
+    public WebElement getMsgError() {
+        return msgError;
+    }
+
+    public WebElement getLogout() {
+        return logout;
     }
 
     public WebElement getNewsletterConfirm() {

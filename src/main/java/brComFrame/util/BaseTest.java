@@ -19,8 +19,9 @@ public class BaseTest {
 
     protected void initializeWebApplication(WebApplication webApplication) {
         webDriver = webApplication.getDriver();
-        webDriver.manage().window().fullscreen();
+        webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+
     }
 
 

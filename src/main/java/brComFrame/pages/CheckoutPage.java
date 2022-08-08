@@ -107,12 +107,8 @@ public class CheckoutPage {
     @FindBy(xpath = "//div[@id='confirm-order-buttons-container']//child::input")
     private WebElement confirmButton;
 
-    @FindBy(xpath = "//[@id='checkout-shipping-load']/div/div[2]/p[2]/i")
-    private WebElement textCheckout;
-
     @FindBy(xpath = "//*[contains(text(),'Your order has been successfully processed!')]")
     private WebElement checkoutMsg;
-
 
     @FindBy(id = "PickUpInStore")
     private WebElement store;
@@ -209,10 +205,6 @@ public class CheckoutPage {
 
     public WebElement getPayment() {
         return payment;
-    }
-
-    public WebElement getTextCheckout() {
-        return textCheckout;
     }
 
     public WebElement getCheckoutMsg() {

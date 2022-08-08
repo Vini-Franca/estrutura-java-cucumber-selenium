@@ -8,6 +8,14 @@ Funcionalidade: Incluir produtos disponíveis ao carrinho
   Eu como usuário cadastrado
   Desejo incluir produtos disponíveis ao carrinho
 
+  @addSearch
+  Cenario: Localizar produto pela barra de pesquisa e adicioná-lo ao carrinho
+    Dado que ja estou logado
+    E pesquiso um produto
+    Quando seleciono o item
+    E clico add to cart
+    Entao devo visualizar uma mensagem "The product has been added to your shopping cart"
+
   @addPC
   Cenario: Adicionar um computador ao carrinho
     Dado que ja estou logado

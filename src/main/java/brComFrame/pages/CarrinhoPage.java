@@ -93,6 +93,12 @@ public class CarrinhoPage {
     @FindBy(className = "recipient-name")
     private WebElement recipient;
 
+    @FindBy(id = "small-searchterms")
+    private WebElement search;
+
+    @FindBy(xpath = "//input[@value='Search']")
+    private WebElement buttonSearch;
+
     @FindBy(className = "message")
     private WebElement message;
 
@@ -113,6 +119,15 @@ public class CarrinhoPage {
     public WebElement getGiftCards() {
         return giftCards;
     }
+
+    public WebElement getSearch() {
+        return search;
+    }
+
+    public WebElement getButtonSearch() {
+        return buttonSearch;
+    }
+
 
     public WebElement getPhysicalCard() {
         return physicalCard;

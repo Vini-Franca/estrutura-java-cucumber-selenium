@@ -14,17 +14,17 @@ public class CheckoutFuncionalidade extends BaseTest {
     public void Login() {
         this.webDriver.get("http://demowebshop.tricentis.com/");
         checkoutPage.getLogin().click();
-        checkoutPage.getEmail().sendKeys("justiceiro@teste.com");
+        checkoutPage.getEmail().sendKeys("teste003@teste.com");
         checkoutPage.getPassword().sendKeys("teste123");
         checkoutPage.getLoginSubmit().click();
     }
 
     public void FormCash() throws InterruptedException {
-        checkoutPage.getSelectCountry().click();
-        checkoutPage.getCity().sendKeys("São Paulo");
-        checkoutPage.getAdress().sendKeys("Rua Barão do Rio Branco");
-        checkoutPage.getZipCode().sendKeys("04845161");
-        checkoutPage.getPhone().sendKeys("+5511985447858");
+//        checkoutPage.getSelectCountry().click();
+//        checkoutPage.getCity().sendKeys("São Paulo");
+//        checkoutPage.getAdress().sendKeys("Rua Barão do Rio Branco");
+//        checkoutPage.getZipCode().sendKeys("04845161");
+//        checkoutPage.getPhone().sendKeys("+5511985447858");
         checkoutPage.getContinueButton().click();
         checkoutPage.getStore().click();
         checkoutPage.getNextButton().click();

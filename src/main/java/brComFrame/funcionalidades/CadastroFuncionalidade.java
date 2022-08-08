@@ -21,21 +21,25 @@ public class CadastroFuncionalidade extends BaseTest {
     public void SignupUser() {
         user.getRegister().click();
         user.getGender().click();
-        user.getFirstName().sendKeys("Frank");
-        user.getLastName().sendKeys("Castle");
-        user.getEmailSignup().sendKeys("justiceiro@teste.com");
+        user.getLastName().sendKeys("Teste");
+        user.getFirstName().sendKeys("Teste");
+        user.getEmailSignup().sendKeys("teste003@teste.com");
         user.getPassword().sendKeys("teste123");
         user.getConfirmPassword().sendKeys("teste123");
     }
 
     public void loginConfirm(String email) {
-        user.getAccountEmail().getText();
+        user.getAccountEmail().getText().contains(email);
     }
 
     public void Credentials() {
-        user.getEmail().sendKeys("justiceiro@teste.com");
+        user.getEmail().sendKeys("teste003@teste.com");
         user.getPassword().sendKeys("teste123");
         user.getLoginSubmit().click();
+    }
+
+    public void Logout() {
+        user.getLogout().click();
     }
 
     public void Submit() {
@@ -50,36 +54,9 @@ public class CadastroFuncionalidade extends BaseTest {
     public void LoginNews() {
         this.webDriver.get("http://demowebshop.tricentis.com/");
         user.getLogin().click();
-        user.getEmail().sendKeys("justiceiro@teste.com");
+        user.getEmail().sendKeys("teste003@teste.com");
         user.getPassword().sendKeys("teste123");
         user.getLoginSubmit().click();
-    }
-
-
-    public void NewsletterEmail() {
-        user.getNewsletterEmail().sendKeys("teste12@teste.com");
-    }
-
-    public void NewsletterSubmit() {
-        user.getNewslleterSubmit().click();
-    }
-
-    public void NewsletterConfirm() {
-        user.getNewsletterConfirm().getText();
-    }
-
-
-    public void TextoConfirmação(String register) {
-        user.getMsgConfirm().getText();
-    }
-
-    public void Login() {
-        user.getLogin().click();
-    }
-
-
-    public void registerPage() {
-        user.getRegister().click();
     }
 
     public void validateFisrName() {
@@ -135,6 +112,30 @@ public class CadastroFuncionalidade extends BaseTest {
         user.getPassword().sendKeys("teste123");
         user.getConfirmPassword().sendKeys("teste12345");
         user.getBtnRegister().click();
+    }
+
+    public void NewsletterEmail() {
+        user.getNewsletterEmail().sendKeys("teste12@teste.com");
+    }
+
+    public void NewsletterSubmit() {
+        user.getNewslleterSubmit().click();
+    }
+
+    public void NewsletterConfirm() {
+        user.getNewsletterConfirm().getText();
+    }
+
+    public void TextoConfirmação(String register) {
+        user.getMsgConfirm().getText();
+    }
+
+    public void Login() {
+        user.getLogin().click();
+    }
+
+    public void registerPage() {
+        user.getRegister().click();
     }
 
     public void firstNameMsg(String firstMsg) {

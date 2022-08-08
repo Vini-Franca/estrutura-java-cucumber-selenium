@@ -8,7 +8,6 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
-
 public class Hooks extends BaseTest {
 
     @Before()
@@ -17,6 +16,7 @@ public class Hooks extends BaseTest {
         ReportVariables.setNome_cT(scenario.getName());
         scenario.toString();
         System.out.println("Teste execução Hooks Web");
+
     }
 
     @After()
